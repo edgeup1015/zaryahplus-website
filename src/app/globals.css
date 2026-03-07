@@ -55,6 +55,13 @@
     background-clip: text;
   }
 
+  .gold-gradient-text .split-char {
+    background: linear-gradient(135deg, #D7B56A, #E7CF8C, #F0DFA0, #E7CF8C, #D7B56A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .gold-glow {
     box-shadow: 0 0 40px rgba(215, 181, 106, 0.15), 0 0 80px rgba(215, 181, 106, 0.05);
   }

@@ -13,7 +13,7 @@ const capabilities = [
   {
     title: "Quran & Hadith Intelligence",
     description:
-      "Search with full context, chain verification, and scholarly commentary — not just isolated verses.",
+      "Search with full context, chain verification, and scholarly commentary - not just isolated verses.",
     icon: "🔍",
   },
   {
@@ -23,9 +23,9 @@ const capabilities = [
     icon: "💛",
   },
   {
-    title: "Digital Twin — She Remembers",
+    title: "Digital Twin - She Remembers",
     description:
-      "Your goals, struggles, milestones — Raya never forgets. Upload your memories and she walks beside you on your journey.",
+      "Your goals, struggles, milestones - Raya never forgets. Upload your memories and she walks beside you on your journey.",
     icon: "🧠",
   },
   {
@@ -37,7 +37,7 @@ const capabilities = [
   {
     title: "Scholar Connector",
     description:
-      "For questions beyond AI — connects you directly to verified scholars for live, personal consultation.",
+      "For questions beyond AI - connects you directly to verified scholars for live, personal consultation.",
     icon: "🤝",
   },
 ];
@@ -58,14 +58,15 @@ export function RayaSection() {
             More Than a Chatbot.
             <br />
             <span className="gold-gradient-text font-medium">
-              Your Pious Digital Companion.
+              A Companion That Understands Both of Your Worlds.
             </span>
           </h2>
           <p className="text-text-secondary text-lg max-w-3xl mx-auto breathe">
-            Raya is an AI-powered Islamic companion designed to help you manage
-            your worldly affairs while keeping your Akhirah as the ultimate
-            priority. Trained on authentic Quran, Hadith, Fiqh, and Seerah —
-            every response is grounded in traceable scholarship.
+            In a world of AI that knows everything about you but cares about
+            nothing - Raya is different. She&apos;s built on trusted scholarship,
+            trained to understand your struggles, and designed with one purpose:
+            to help you navigate both Dunya and Akhirah with confidence and
+            clarity.
           </p>
         </AnimatedSection>
 
@@ -87,11 +88,11 @@ export function RayaSection() {
               </p>
               <p className="text-text-secondary text-lg breathe mb-6">
                 Raya remembers. Upload your memories, your aspirations, your
-                milestones — and she&apos;ll gently walk beside you. Reminding
+                milestones - and she&apos;ll gently walk beside you. Reminding
                 you. Encouraging you. Never forgetting.
               </p>
               <p className="text-cream text-lg font-medium">
-                It&apos;s not just AI. It&apos;s an emotional bond built on trust — a
+                It&apos;s not just AI. It&apos;s an emotional bond built on trust - a
                 companion that grows with you through every chapter of your life.
               </p>
             </div>
@@ -138,8 +139,8 @@ export function RayaSection() {
                 Raya Default
               </h4>
               <p className="text-text-secondary breathe">
-                Direct, practical Islamic guidance with authentic sources and
-                clear action steps. Raya gives you what you need — grounded,
+                Direct, practical Islamic guidance with trusted sources and
+                clear action steps. Raya gives you what you need - grounded,
                 sourced, and actionable. At the end, she offers the option to go
                 deeper with Companion Mode.
               </p>
@@ -154,7 +155,7 @@ export function RayaSection() {
               <p className="text-text-secondary breathe">
                 Deeper, character-driven guidance framed through the documented
                 wisdom of the Sahaba, Sahabiyat, or Four Imams. Historical
-                context meets practical wisdom — tailored to your life today.
+                context meets practical wisdom - tailored to your life today.
               </p>
             </div>
           </div>

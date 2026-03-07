@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Zaryah+ | The World's First Islamic Super Agent",
   description:
-    "Uniting the Ummah Through Faith-Centered Technology. One platform for your complete Islamic lifestyle — finance, education, spirituality, community, and more.",
+    "Uniting the Ummah Through Faith-Centered Technology. One platform for your complete Islamic lifestyle - finance, education, spirituality, community, and more.",
   keywords: [
     "Islamic app",
     "Muslim super app",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zaryah+ | The World's First Islamic Super Agent",
     description:
-      "One platform for your complete Islamic lifestyle — powered by AI that understands Islamic context.",
+      "One platform for your complete Islamic lifestyle - powered by AI that understands Islamic context.",
     type: "website",
     url: "https://zaryahplus.com",
   },

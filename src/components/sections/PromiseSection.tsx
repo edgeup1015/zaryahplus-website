@@ -18,7 +18,7 @@ const promises = [
   },
   {
     text: "We are here to serve.",
-    sub: "The beauty of Islam — made accessible, practical, and personal.",
+    sub: "The beauty of Islam - made accessible, practical, and personal.",
   },
 ];
 
@@ -55,15 +55,12 @@ export function PromiseSection() {
         </div>
 
         <FadeIn>
-          <p className="text-text-secondary text-lg breathe max-w-2xl mx-auto mb-4">
-            Whether you&apos;re a lifelong scholar or just beginning to explore your
-            faith — Zaryah+ meets you where you are.
-          </p>
-          <p className="font-[family-name:var(--font-display)] text-xl text-cream font-light mb-12">
-            No sectarianism. No gatekeeping.
-            <br />
-            Just authentic knowledge, served with{" "}
-            <span className="gold-gradient-text font-medium">mercy</span>.
+          <p className="font-[family-name:var(--font-display)] text-xl text-cream font-light mb-12 max-w-2xl mx-auto">
+            We didn&apos;t build Zaryah to tell you how to be Muslim. We built it
+            so being Muslim in this world feels a little less{" "}
+            <span className="gold-gradient-text font-medium">lonely</span> -
+            and a lot more{" "}
+            <span className="gold-gradient-text font-medium">empowering</span>.
           </p>
         </FadeIn>
 

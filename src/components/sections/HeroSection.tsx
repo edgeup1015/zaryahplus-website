@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import { GoldButton } from "../ui/GoldButton";
 
+
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background glow effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gold/[0.03] blur-[120px]" />
@@ -22,7 +23,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,29 +38,36 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[1.1] mb-8"
-        >
-          Uniting the Ummah
-          <br />
-          <span className="gold-gradient-text font-medium">
-            Through Technology
-          </span>
-        </motion.h1>
+        <div className="font-[family-name:var(--font-display)] font-light leading-[1.2] mb-8">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.2]"
+          >
+            The World Forgot Your Values.
+          </motion.h1>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="gold-gradient-text font-medium font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2] block"
+          >
+            We Built an Intelligence Around Them.
+          </motion.span>
+        </div>
 
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 breathe"
+          className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 breathe"
         >
-          One platform for your complete Islamic lifestyle — finance, education,
-          spirituality, community, and more. All Shariah-compliant. All
-          interconnected. Powered by AI that understands your Deen.
+          In the chaos of the digital age, your values shouldn&apos;t be an
+          afterthought. Zaryah+ is an AI ecosystem built on Islamic principles
+          - designed to understand you, uplift you, and walk with you. Not just
+          another app. A conscience.
         </motion.p>
 
         {/* CTAs */}
@@ -77,21 +85,6 @@ export function HeroSection() {
           </GoldButton>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-5 h-8 rounded-full border border-gold/30 flex items-start justify-center p-1.5"
-          >
-            <div className="w-1 h-2 rounded-full bg-gold/60" />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ const sahabiyat: Companion[] = [
     title: "Mother of the Believers",
     approach: "Unwavering Support & Sacrifice",
     description:
-      "Steadfastness, emotional support, and standing firm beside those you believe in — even when the world turns away.",
+      "Steadfastness, emotional support, and standing firm beside those you believe in - even when the world turns away.",
   },
   {
     name: "Aisha bint Abi Bakr",
@@ -97,7 +97,7 @@ const imams: Companion[] = [
   {
     name: "Imam Ahmad ibn Hanbal",
     title: "Imam of Ahl al-Hadith",
-    approach: "Textual Authenticity",
+    approach: "Textual Integrity",
     description:
       "Strict adherence to Quran and Hadith. For when you want guidance drawn directly from the primary sources.",
   },
@@ -175,21 +175,21 @@ export function CompanionsSection() {
         {/* Disclaimer */}
         <FadeIn className="mb-20">
           <div className="max-w-4xl mx-auto p-8 md:p-10 rounded-2xl bg-gradient-to-br from-gold/[0.04] to-transparent border border-gold/15 text-center">
-            <p className="text-cream text-lg md:text-xl leading-relaxed font-[family-name:var(--font-display)] font-light">
+            <p className="text-cream text-lg md:text-xl leading-relaxed font-[family-name:var(--font-display)] font-bold">
               We do not simulate, recreate, or speak as the Sahabah.
             </p>
             <div className="w-12 h-px bg-gold/30 mx-auto my-6" />
             <p className="text-text-secondary breathe max-w-3xl mx-auto">
               Imagine someone who has spent their entire life studying, admiring,
               and absorbing the wisdom of these noble figures. Someone who has
-              read every authenticated account, memorized every lesson, and
+              read every verified account, memorized every lesson, and
               internalized every principle.
             </p>
             <p className="text-text-secondary breathe max-w-3xl mx-auto mt-4">
-              That person now sits with you — not speaking{" "}
+              That person now sits with you - not speaking{" "}
               <span className="text-cream italic">as</span> the Companion, but
               sharing everything they&apos;ve learned{" "}
-              <span className="text-cream italic">from</span> them — with love,
+              <span className="text-cream italic">from</span> them - with love,
               context, and practical wisdom for your life today.
             </p>
           </div>
@@ -209,7 +209,7 @@ export function CompanionsSection() {
             Learn from their lives. Apply their wisdom.
             <br />
             <span className="gold-gradient-text font-medium">
-              Walk their path — in your own way.
+              Walk their path - in your own way.
             </span>
           </p>
         </FadeIn>

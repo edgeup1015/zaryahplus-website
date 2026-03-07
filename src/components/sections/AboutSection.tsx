@@ -6,25 +6,25 @@ const values = [
   {
     title: "No Judgment, Only Upliftment",
     description:
-      "We're not here to judge anyone's journey. Every Muslim is at a different stage, and that's beautiful. We exist solely to uplift, educate, and support — meeting you exactly where you are.",
+      "We're not here to judge anyone's journey. Every Muslim is at a different stage, and that's beautiful. We exist solely to uplift, educate, and support - meeting you exactly where you are.",
     icon: "01",
   },
   {
-    title: "Authentic Scholarship",
+    title: "Grounded Scholarship",
     description:
-      "Every piece of guidance is grounded in verified Quran, Hadith, classical Fiqh, and authenticated Seerah. No opinions — just traceable, authentic knowledge from recognized Islamic sources.",
+      "Every piece of guidance is rooted in verified Quran, Hadith, classical Fiqh, and verified Seerah. No opinions - just traceable, grounded knowledge from recognized Islamic sources.",
     icon: "02",
   },
   {
     title: "Every Madhab, Every Muslim",
     description:
-      "We respect all four schools of thought and never impose a single view. Zaryah+ is built for every Muslim — Hanafi, Maliki, Shafi'i, Hanbali — united in faith, diverse in practice.",
+      "We respect all four schools of thought and never impose a single view. Zaryah+ is built for every Muslim - Hanafi, Maliki, Shafi'i, Hanbali - united in faith, diverse in practice.",
     icon: "03",
   },
   {
     title: "Your Journey, Your Privacy",
     description:
-      "Your memories, your goals, your conversations — they belong to you. We build trust through transparency and treat your data with the sanctity it deserves.",
+      "Your memories, your goals, your conversations - they belong to you. We build trust through transparency and treat your data with the sanctity it deserves.",
     icon: "04",
   },
 ];
@@ -39,23 +39,22 @@ export function AboutSection() {
             Our Vision
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-light mt-6 mb-8">
-            One Trusted Source for
+            When the World Overwhelms You
             <br />
             <span className="gold-gradient-text font-medium">
-              1.8 Billion Believers
+              Your Deen Shouldn&apos;t Feel Out of Reach
             </span>
           </h2>
           <p className="text-text-secondary text-lg max-w-3xl mx-auto breathe">
-            Muslims today juggle dozens of apps of varying authenticity — one for
-            prayer times, another for Quran, yet another for Islamic finance.
-            None of them talk to each other. None of them truly understand you.
+            We live in an age of endless noise - information without wisdom,
+            connection without depth, tools without soul. Muslims deserve more
+            than scattered apps that don&apos;t understand them.
             <br />
             <br />
-            Zaryah+ changes that. A single, comprehensive platform that serves
-            as your trusted gateway for both{" "}
-            <span className="text-gold">Deen</span> and{" "}
-            <span className="text-gold">Dunya</span> — firmly rooted in
-            authentic Islamic scholarship.
+            Zaryah+ is the intelligence we wished existed - one that thinks
+            with you, learns with you, and never loses sight of what matters:
+            your <span className="text-gold">faith</span>, your{" "}
+            <span className="text-gold">ethics</span>, your peace of mind.
           </p>
         </AnimatedSection>
 
@@ -82,13 +81,13 @@ export function AboutSection() {
         <FadeIn className="mt-24">
           <div className="text-center p-12 md:p-16 rounded-3xl bg-gradient-to-b from-gold/[0.03] to-transparent border border-gold/10">
             <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-light text-cream leading-relaxed max-w-4xl mx-auto">
-              &ldquo;We are not here to tell you what&apos;s wrong with you. We are
-              here to help you discover what&apos;s{" "}
+              Imagine an intelligence that doesn&apos;t just answer your questions
+              - but understands{" "}
               <span className="gold-gradient-text font-medium">
-                beautiful within you
+                why you&apos;re asking
               </span>
-              — and nurture it with authentic knowledge, genuine care, and
-              unwavering respect.&rdquo;
+              . One that protects your principles in a world that constantly
+              challenges them. That&apos;s not a dream. That&apos;s Zaryah.
             </p>
           </div>
         </FadeIn>

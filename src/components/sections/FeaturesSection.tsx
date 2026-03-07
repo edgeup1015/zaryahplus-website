@@ -86,12 +86,12 @@ const features: Feature[] = [
   },
   {
     name: "Media Library",
-    description: "Curated Islamic content — Quran recitations, podcasts, lectures, and nasheeds",
+    description: "Curated Islamic content - Quran recitations, podcasts, lectures, and nasheeds",
     category: "Education",
   },
   {
     name: "Ramadan Edition",
-    description: "Special Ramadan features — fasting tracker, Taraweeh guide, charity goals",
+    description: "Special Ramadan features - fasting tracker, Taraweeh guide, charity goals",
     category: "Education",
   },
 ];
@@ -115,8 +115,9 @@ export function FeaturesSection() {
             </span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto breathe">
-            Everything you need for Deen and Dunya — integrated, authenticated,
-            and beautifully designed. No more switching between a dozen apps.
+            All your needs shouldn&apos;t be scattered across a dozen apps - but
+            woven into one intelligent platform that learns, adapts, and grows
+            with your community.
           </p>
         </AnimatedSection>
 
