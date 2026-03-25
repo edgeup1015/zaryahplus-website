@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Galaxy from "@/components/ui/Galaxy";
 
 export const metadata: Metadata = {
   title: "Zaryah+ | The World's First Islamic Super Agent",
@@ -44,7 +45,28 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <Galaxy
+            mouseRepulsion={false}
+            mouseInteraction={false}
+            density={1}
+            glowIntensity={0.3}
+            saturation={0}
+            hueShift={40}
+            twinkleIntensity={0.3}
+            rotationSpeed={0.1}
+            repulsionStrength={2}
+            autoCenterRepulsion={0}
+            starSpeed={0.5}
+            speed={1}
+            transparent
+          />
+        </div>
+        <div className="relative z-10">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

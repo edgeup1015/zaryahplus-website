@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <footer className="py-16 px-6 bg-black-card border-t border-gold/10">
+    <footer className="py-16 px-6 bg-black-card/80 border-t border-gold/10">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}

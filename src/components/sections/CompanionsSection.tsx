@@ -4,7 +4,7 @@ import { AnimatedSection } from "../ui/AnimatedSection";
 
 export function CompanionsSection() {
   return (
-    <section id="companions" className="section-padding bg-black-pure relative">
+    <section id="companions" className="section-padding bg-transparent relative">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection className="text-center">
           <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">

@@ -58,7 +58,7 @@ function PromiseLine({ text, sub, index }: { text: string; sub: string; index: n
 
 export function PromiseSection() {
   return (
-    <section id="promise" className="section-padding bg-black-pure relative">
+    <section id="promise" className="section-padding bg-transparent relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gold/[0.02] blur-[150px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">

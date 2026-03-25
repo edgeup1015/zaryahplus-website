@@ -44,7 +44,7 @@ const capabilities = [
 
 export function RayaSection() {
   return (
-    <section id="raya" className="section-padding bg-black-soft relative overflow-hidden">
+    <section id="raya" className="section-padding bg-black-soft/80 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/[0.02] blur-[150px]" />
 

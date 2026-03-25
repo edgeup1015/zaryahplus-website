@@ -4,7 +4,7 @@ import { AnimatedSection } from "../ui/AnimatedSection";
 
 export function DinarzSection() {
   return (
-    <section id="dinarz" className="section-padding bg-black-pure relative overflow-hidden">
+    <section id="dinarz" className="section-padding bg-transparent relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/[0.03] blur-[150px]" />
 

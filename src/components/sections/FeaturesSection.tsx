@@ -103,7 +103,7 @@ export function FeaturesSection() {
   const [active, setActive] = useState("Faith");
 
   return (
-    <section id="features" className="section-padding !pb-16 bg-black-soft relative overflow-hidden">
+    <section id="features" className="section-padding !pb-16 bg-black-soft/80 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto">
