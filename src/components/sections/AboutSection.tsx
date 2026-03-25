@@ -18,7 +18,7 @@ const values = [
   {
     title: "Every Madhab, Every Muslim",
     description:
-      "We respect all four schools of thought and never impose a single view. Zaryah+ is built for every Muslim - Hanafi, Maliki, Shafi'i, Hanbali - united in faith, diverse in practice.",
+      "We respect all four schools of thought and never impose a single view. Zaryah⁺ is built for every Muslim - Hanafi, Maliki, Shafi'i, Hanbali - united in faith, diverse in practice.",
     icon: "03",
   },
   {
@@ -51,7 +51,7 @@ export function AboutSection() {
             than scattered apps that don&apos;t understand them.
             <br />
             <br />
-            Zaryah+ is the intelligence we wished existed - one that thinks
+            Zaryah<sup className="text-[1.2em] -ml-[2px] relative -top-[0.2em]">+</sup> is the intelligence we wished existed - one that thinks
             with you, learns with you, and never loses sight of what matters:
             your <span className="text-gold">faith</span>, your{" "}
             <span className="text-gold">ethics</span>, your peace of mind.
@@ -77,20 +77,6 @@ export function AboutSection() {
           ))}
         </div>
 
-        {/* Problem statement */}
-        <FadeIn className="mt-24">
-          <div className="text-center p-12 md:p-16 rounded-3xl bg-gradient-to-b from-gold/[0.03] to-transparent border border-gold/10">
-            <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-light text-cream leading-relaxed max-w-4xl mx-auto">
-              Imagine an intelligence that doesn&apos;t just answer your questions
-              - but understands{" "}
-              <span className="gold-gradient-text font-medium">
-                why you&apos;re asking
-              </span>
-              . One that protects your principles in a world that constantly
-              challenges them. That&apos;s not a dream. That&apos;s Zaryah.
-            </p>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );

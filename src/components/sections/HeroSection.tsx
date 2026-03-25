@@ -38,36 +38,36 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main heading */}
-        <div className="font-[family-name:var(--font-display)] font-light leading-[1.2] mb-8">
+        <div className="font-[family-name:var(--font-display)] font-light leading-[1.2] mb-4">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.2]"
           >
-            The World Forgot Your Values.
+            Your Deen. Your Agent. Your Way.
           </motion.h1>
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="gold-gradient-text font-medium font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2] block"
-          >
-            We Built an Intelligence Around Them.
-          </motion.span>
         </div>
+
+        {/* Lincoln-inspired subline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="gold-gradient-text font-medium font-[family-name:var(--font-display)] text-xl sm:text-2xl md:text-3xl tracking-wide mb-8"
+        >
+          For the Muslims. By the Muslims. To the Muslims.
+        </motion.p>
 
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 breathe"
+          className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12"
         >
-          In the chaos of the digital age, your values shouldn&apos;t be an
-          afterthought. Zaryah+ is an AI ecosystem built on Islamic principles
-          - designed to understand you, uplift you, and walk with you. Not just
-          another app. A conscience.
+          One app. Faith, finance, community, education — powered by AI agents
+          that understand your values and actually get things done.
         </motion.p>
 
         {/* CTAs */}
@@ -77,8 +77,8 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <GoldButton href="https://app.zaryahplus.com" variant="filled">
-            Try Zaryah+
+          <GoldButton href="https://app.zaryahplus.com" variant="filled" className="!normal-case">
+            Try Zaryah<sup className="text-[1.2em] -ml-[2px] relative -top-[0.2em]">+</sup>
           </GoldButton>
           <GoldButton href="#raya" variant="outline">
             Meet Raya

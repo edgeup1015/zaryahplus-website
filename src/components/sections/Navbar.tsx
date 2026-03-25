@@ -35,8 +35,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <span className="text-2xl font-bold tracking-tight font-[family-name:var(--font-display)]">
-            <span className="gold-gradient-text">Zaryah</span>
-            <span className="text-white">+</span>
+            <span className="gold-gradient-text">Zaryah</span><sup className="text-[1.2em] -ml-[2px] relative -top-[0.25em] gold-gradient-text">+</sup>
           </span>
         </a>
 
@@ -61,7 +60,7 @@ export function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="px-6 py-2.5 text-sm font-medium bg-gradient-to-r from-gold-dim via-gold to-gold-light text-black rounded-full tracking-wide hover:shadow-[0_0_25px_rgba(215,181,106,0.35)] transition-shadow duration-300"
           >
-            Try Zaryah+
+            Try Zaryah<sup className="text-[1.2em] -ml-[2px] relative -top-[0.2em]">+</sup>
           </motion.a>
         </div>
 
@@ -111,7 +110,7 @@ export function Navbar() {
               href="https://app.zaryahplus.com"
               className="mt-4 px-6 py-3 text-center text-sm font-medium bg-gradient-to-r from-gold-dim via-gold to-gold-light text-black rounded-full"
             >
-              Try Zaryah+
+              Try Zaryah<sup className="text-[1.2em] -ml-[2px] relative -top-[0.2em]">+</sup>
             </a>
           </div>
         </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
 
 interface Feature {
@@ -99,60 +100,83 @@ const features: Feature[] = [
 const categories = ["Faith", "Finance", "Community", "Education"];
 
 export function FeaturesSection() {
+  const [active, setActive] = useState("Faith");
+
   return (
-    <section id="features" className="section-padding bg-black-soft relative overflow-hidden">
+    <section id="features" className="section-padding !pb-16 bg-black-soft relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto">
-        <AnimatedSection className="text-center mb-20">
+        <AnimatedSection className="text-center mb-16">
           <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
             Platform
           </span>
-          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-light mt-6 mb-8">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-6">
             A Complete{" "}
             <span className="gold-gradient-text font-medium">
               Islamic Ecosystem
             </span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto breathe">
-            All your needs shouldn&apos;t be scattered across a dozen apps - but
-            woven into one intelligent platform that learns, adapts, and grows
-            with your community.
-          </p>
         </AnimatedSection>
 
-        {categories.map((cat) => (
-          <div key={cat} className="mb-12 last:mb-0">
-            <AnimatedSection>
-              <h3 className="text-gold/60 text-xs tracking-[0.3em] uppercase font-medium mb-6">
-                {cat}
-              </h3>
-            </AnimatedSection>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {features
-                .filter((f) => f.category === cat)
-                .map((feature, i) => (
-                  <AnimatedSection key={feature.name} delay={i * 0.06}>
-                    <motion.div
-                      whileHover={{
-                        y: -4,
-                        borderColor: "rgba(215,181,106,0.3)",
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="p-6 rounded-xl bg-black-card border border-white/[0.04] transition-all duration-500 h-full"
-                    >
-                      <h4 className="text-white font-medium mb-2">
-                        {feature.name}
-                      </h4>
-                      <p className="text-text-secondary text-sm breathe">
-                        {feature.description}
-                      </p>
-                    </motion.div>
-                  </AnimatedSection>
-                ))}
-            </div>
+        {/* Tab navigation */}
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex gap-1 sm:gap-2 p-1.5 rounded-full bg-black-card border border-white/[0.06]">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className={`relative px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium tracking-wide rounded-full transition-all duration-300 cursor-pointer ${
+                  active === cat
+                    ? "text-black"
+                    : "text-text-secondary hover:text-white"
+                }`}
+              >
+                {active === cat && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-gradient-to-r from-gold-dim via-gold to-gold-light rounded-full"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                  />
+                )}
+                <span className="relative z-10">{cat}</span>
+              </button>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Feature cards */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.3 }}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          >
+            {features
+              .filter((f) => f.category === active)
+              .map((feature) => (
+                <motion.div
+                  key={feature.name}
+                  whileHover={{
+                    y: -4,
+                    borderColor: "rgba(215,181,106,0.3)",
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="p-6 rounded-xl bg-black-card border border-white/[0.04] transition-all duration-500 h-full"
+                >
+                  <h4 className="text-white font-medium mb-2">
+                    {feature.name}
+                  </h4>
+                  <p className="text-text-secondary text-sm breathe">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

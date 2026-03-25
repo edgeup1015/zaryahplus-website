@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatedSection, FadeIn } from "../ui/AnimatedSection";
-import { GoldButton } from "../ui/GoldButton";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const promises = [
   {
@@ -22,53 +22,59 @@ const promises = [
   },
 ];
 
+function PromiseLine({ text, sub, index }: { text: string; sub: string; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start 0.85"],
+  });
+
+  const opacity = index === 0 ? useTransform(scrollYProgress, [0, 0.3], [0, 1]) : useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const y = index === 0 ? useTransform(scrollYProgress, [0, 0.3], [30, 0]) : useTransform(scrollYProgress, [0, 1], [30, 0]);
+  const blur = index === 0 ? useTransform(scrollYProgress, [0, 0.3], [8, 0]) : useTransform(scrollYProgress, [0, 1], [8, 0]);
+  const scale = index === 0 ? useTransform(scrollYProgress, [0, 0.3], [0.95, 1]) : useTransform(scrollYProgress, [0, 1], [0.95, 1]);
+  const subOpacity = index === 0 ? useTransform(scrollYProgress, [0.1, 0.4], [0, 1]) : useTransform(scrollYProgress, [0.4, 1], [0, 1]);
+  const subY = index === 0 ? useTransform(scrollYProgress, [0.1, 0.4], [10, 0]) : useTransform(scrollYProgress, [0.4, 1], [10, 0]);
+
+  return (
+    <div ref={ref} className="py-6 md:py-8 border-b border-white/[0.06]">
+      <motion.p
+        style={{ opacity, y, scale }}
+        className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl font-light text-white mb-2"
+      >
+        <motion.span style={{ filter: useTransform(blur, (v) => `blur(${v}px)`) }}>
+          {text}
+        </motion.span>
+      </motion.p>
+      <motion.p
+        style={{ opacity: subOpacity, y: subY }}
+        className="text-text-secondary text-sm md:text-base"
+      >
+        {sub}
+      </motion.p>
+    </div>
+  );
+}
+
 export function PromiseSection() {
   return (
-    <section id="promise" className="section-padding bg-black-pure relative overflow-hidden">
-      {/* Subtle radial glow */}
+    <section id="promise" className="section-padding bg-black-pure relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gold/[0.02] blur-[150px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <AnimatedSection>
-          <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
-            Our Promise
-          </span>
-          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-light mt-6 mb-16">
-            What We{" "}
-            <span className="gold-gradient-text font-medium">
-              Stand For
-            </span>
-          </h2>
-        </AnimatedSection>
+        <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
+          Our Promise
+        </span>
+        <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-6 mb-12">
+          What We{" "}
+          <span className="gold-gradient-text font-medium">Stand For</span>
+        </h2>
 
-        <div className="space-y-8 mb-16">
+        <div>
           {promises.map((p, i) => (
-            <AnimatedSection key={i} delay={i * 0.12}>
-              <div className="py-6 border-b border-white/[0.04]">
-                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-light text-white mb-2">
-                  {p.text}
-                </p>
-                <p className="text-text-secondary breathe">{p.sub}</p>
-              </div>
-            </AnimatedSection>
+            <PromiseLine key={i} text={p.text} sub={p.sub} index={i} />
           ))}
         </div>
-
-        <FadeIn>
-          <p className="font-[family-name:var(--font-display)] text-xl text-cream font-light mb-12 max-w-2xl mx-auto">
-            We didn&apos;t build Zaryah to tell you how to be Muslim. We built it
-            so being Muslim in this world feels a little less{" "}
-            <span className="gold-gradient-text font-medium">lonely</span> -
-            and a lot more{" "}
-            <span className="gold-gradient-text font-medium">empowering</span>.
-          </p>
-        </FadeIn>
-
-        <AnimatedSection delay={0.3}>
-          <GoldButton href="https://app.zaryahplus.com" variant="filled">
-            Begin Your Journey
-          </GoldButton>
-        </AnimatedSection>
       </div>
     </section>
   );

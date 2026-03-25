@@ -7,37 +7,37 @@ const capabilities = [
   {
     title: "Madhab-Aware Guidance",
     description:
-      "Respects your school of thought. Clearly indicates when scholars differ. Never imposes a single opinion.",
+      "Respects your school of thought. Never imposes a single opinion.",
     icon: "📖",
   },
   {
     title: "Quran & Hadith Intelligence",
     description:
-      "Search with full context, chain verification, and scholarly commentary - not just isolated verses.",
+      "Full context, chain verification, and scholarly commentary — not just isolated verses.",
     icon: "🔍",
   },
   {
     title: "Emotional & Spiritual Awareness",
     description:
-      "Detects your emotional state and responds with comforting Duas, motivational guidance, or just a listening ear.",
+      "Responds with comforting Duas, motivational guidance, or just a listening ear.",
     icon: "💛",
   },
   {
-    title: "Digital Twin - She Remembers",
+    title: "Digital Twin - Raya Remembers",
     description:
-      "Your goals, struggles, milestones - Raya never forgets. Upload your memories and she walks beside you on your journey.",
+      "Your goals, struggles, milestones — Raya never forgets. Upload your memories and Raya walks beside you.",
     icon: "🧠",
   },
   {
     title: "Tajweed Companion",
     description:
-      "AI voice recognition for Quranic pronunciation correction. Practice and perfect your recitation, anytime.",
+      "AI-powered Quranic pronunciation correction. Practice your recitation, anytime.",
     icon: "🎙️",
   },
   {
     title: "Scholar Connector",
     description:
-      "For questions beyond AI - connects you directly to verified scholars for live, personal consultation.",
+      "Connects you directly to verified scholars for live, personal consultation.",
     icon: "🤝",
   },
 ];
@@ -55,18 +55,15 @@ export function RayaSection() {
             Meet Raya
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-light mt-6 mb-8">
-            More Than a Chatbot.
+            An Islamic Chatbot
             <br />
             <span className="gold-gradient-text font-medium">
-              A Companion That Understands Both of Your Worlds.
+              Trained to Be Your Companion.
             </span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-3xl mx-auto breathe">
-            In a world of AI that knows everything about you but cares about
-            nothing - Raya is different. She&apos;s built on trusted scholarship,
-            trained to understand your struggles, and designed with one purpose:
-            to help you navigate both Dunya and Akhirah with confidence and
-            clarity.
+          <p className="text-text-secondary text-lg max-w-3xl mx-auto">
+            Ask anything — faith, finance, family, life. Raya is trained to guide you
+            through it all, grounded in Islamic scholarship.
           </p>
         </AnimatedSection>
 
@@ -79,21 +76,12 @@ export function RayaSection() {
                 Your Digital Twin.
                 <br />
                 <span className="gold-gradient-text">
-                  She Remembers Everything.
+                  Raya Remembers Everything.
                 </span>
               </h3>
               <p className="text-text-secondary text-lg breathe mb-6">
-                Your Hajj savings target. The Surah you&apos;re memorizing. The
-                day you felt lost. The dua that brought you peace.
-              </p>
-              <p className="text-text-secondary text-lg breathe mb-6">
-                Raya remembers. Upload your memories, your aspirations, your
-                milestones - and she&apos;ll gently walk beside you. Reminding
-                you. Encouraging you. Never forgetting.
-              </p>
-              <p className="text-cream text-lg font-medium">
-                It&apos;s not just AI. It&apos;s an emotional bond built on trust - a
-                companion that grows with you through every chapter of your life.
+                Your goals, your struggles, your milestones — Raya remembers.
+                A companion that grows with you through every chapter of your life.
               </p>
             </div>
           </div>
@@ -120,46 +108,51 @@ export function RayaSection() {
           ))}
         </div>
 
-        {/* Two modes */}
-        <AnimatedSection className="mt-20">
-          <div className="text-center mb-12">
-            <h3 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-light">
-              Two Ways to{" "}
-              <span className="gold-gradient-text font-medium">
-                Seek Guidance
-              </span>
-            </h3>
-          </div>
+        {/* Companion Mode & Digital Legacy */}
+        <FadeIn className="mt-20">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-8 md:p-10 rounded-2xl bg-black-card border border-gold/10">
-              <div className="text-gold text-xs tracking-[0.2em] uppercase font-medium mb-4">
-                Mode 1
-              </div>
-              <h4 className="font-[family-name:var(--font-display)] text-2xl font-medium text-white mb-4">
-                Raya Default
-              </h4>
+            {/* Companion Mode */}
+            <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-black-card to-gold/[0.03] border border-gold/15">
+              <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
+                Companion Mode
+              </span>
+              <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-light mt-4 mb-4">
+                <span className="gold-gradient-text font-medium">
+                  Guidance From the Sahaba
+                </span>
+              </h3>
               <p className="text-text-secondary breathe">
-                Direct, practical Islamic guidance with trusted sources and
-                clear action steps. Raya gives you what you need - grounded,
-                sourced, and actionable. At the end, she offers the option to go
-                deeper with Companion Mode.
+                An AI companion trained on the history, rulings, and wisdom of the
+                Sahaba — sourced from verified hadith, authenticated biographies, and
+                trusted scholarly works. Not impersonation — real guidance drawn from real scholarship.
               </p>
             </div>
-            <div className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-black-card to-gold/[0.03] border border-gold/20">
-              <div className="text-gold text-xs tracking-[0.2em] uppercase font-medium mb-4">
-                Mode 2
+
+            {/* Digital Legacy */}
+            <div className="relative p-8 md:p-10 rounded-3xl bg-gradient-to-br from-black-card to-black-elevated border border-gold/15 overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/[0.04] blur-[80px] rounded-full" />
+              <div className="relative z-10">
+                <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
+                  Digital Twin
+                </span>
+                <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-light mt-4 mb-4">
+                  <span className="gold-gradient-text font-medium">
+                    Your Digital Legacy.
+                  </span>
+                </h3>
+                <p className="text-text-secondary breathe mb-4">
+                  What if your great-grandchildren could learn from your journey?
+                  The Sahaba passed down wisdom through narration. Now you can too.
+                  Your Digital Twin captures your milestones, your lessons, your duas.
+                  You own it. You control it. Nothing is shared without your permission.
+                </p>
+                <p className="text-cream font-medium font-[family-name:var(--font-display)]">
+                  A sadaqah jariyah of knowledge, from you to your lineage.
+                </p>
               </div>
-              <h4 className="font-[family-name:var(--font-display)] text-2xl font-medium text-white mb-4">
-                Companion Mode
-              </h4>
-              <p className="text-text-secondary breathe">
-                Deeper, character-driven guidance framed through the documented
-                wisdom of the Sahaba, Sahabiyat, or Four Imams. Historical
-                context meets practical wisdom - tailored to your life today.
-              </p>
             </div>
           </div>
-        </AnimatedSection>
+        </FadeIn>
       </div>
     </section>
   );
