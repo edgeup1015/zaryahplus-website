@@ -45,7 +45,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.2]"
           >
-            Your Deen. Your Agent. Your Way.
+            Live with Purpose, Powered by Intelligence
           </motion.h1>
         </div>
 
