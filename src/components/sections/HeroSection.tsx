@@ -56,7 +56,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="gold-gradient-text font-medium font-[family-name:var(--font-display)] text-xl sm:text-2xl md:text-3xl tracking-wide mb-8"
         >
-          For the Muslims. By the Muslims. To the Muslims.
+          Of the Muslims. By the Muslims. For the Muslims.
         </motion.p>
 
         {/* Subtitle */}
