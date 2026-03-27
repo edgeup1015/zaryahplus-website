@@ -18,13 +18,12 @@ export function DinarzSection() {
               The First Islamic Ecosystem
               <br />
               <span className="gold-gradient-text font-medium">
-                That Pays You to Use It.
+                That Also Pays You to Use It.
               </span>
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
               Meet Dinarz — a halal cryptocurrency you earn through your
-              contributions, engagement, and Digital Twin activity. No spending,
-              no subscriptions — just real value generated while you sleep, work,
+              contributions, engagement, and Digital Twin activity. Just real value generated while you sleep, work,
               or go about your day. Your built-in wallet lets you hold, transact,
               convert to fiat, or reinvest in the community. No banks. No
               middlemen. No riba. No compromise.
